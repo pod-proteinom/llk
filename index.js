@@ -3,7 +3,7 @@ const express = require('express');
 const fetch = require('node-fetch');
 
 const app = express();
-
+console.log(Object.assign({port: 5000}, conf));
 app.enable('strict routing');
 app.enable('case sensitive routing');
 
