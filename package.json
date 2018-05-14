@@ -1,0 +1,27 @@
+{
+  "name": "llk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pod-proteinom/llk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pod-proteinom/llk/issues"
+  },
+  "homepage": "https://github.com/pod-proteinom/llk#readme",
+  "dependencies": {
+    "config": "^1.30.0",
+    "express": "^4.16.3",
+    "node-fetch": "^2.1.2",
+    "nodemon": "^1.17.4",
+    "pug": "^2.0.3"
+  }
+}
