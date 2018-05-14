@@ -1,8 +1,4 @@
-var KanjiArray = [{
-    "name": "日",
-    "kana": "ニチ ・ ジツ ・ ひ ・ -び ・ -か",
-    "english": "day; sun; Japan; counter for days"
-}];
+// var KanjiArray = kanjis
 
 
 var Card = (function Card(kanjilist) {

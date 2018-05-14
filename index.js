@@ -13,15 +13,19 @@ app.set('view engine', 'pug');
 app.set('views', conf.dir.views);
 
 app.get('/', async (req, res, next) => {
-	const kanjiSecond = await fetch('https://www.wanikani.com/api/user/d77c617eaeddcf1b190183394563b66f/kanji/2');
-	const kanjiSecondJson = await kanjiSecond.json();
+	const kanjiSecondRes = await fetch('https://www.wanikani.com/api/user/d77c617eaeddcf1b190183394563b66f/kanji/2');
+	const kanjiSecond = await kanjiSecondRes.json();
 
-	console.log(kanjiSecondJson);
-	for(let kanji in kanjiSecondJson) {
-		
+	let kanjis = [];
+	for(let kanji of kanjiSecond.requested_information) {
+		kanjis.push({
+			name: kanji.character,
+			kana: kanji[kanji.important_reading],
+			english: kanji.meaning
+		});
 	}
 
-	res.render('index', {})
+	res.render('index', {kanjis})
 });
 
 const server = app.listen(conf.port, err => {
